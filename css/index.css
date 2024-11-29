@@ -1,0 +1,191 @@
+/* 初始化 body */
+body {
+    max-width: 2560px;
+    margin: 0 auto;
+}
+
+/* 顶部模块 start */
+.index-header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1440px;
+    width: 100%;
+    height: 65px;
+}
+
+.index-header a {
+    font-weight: 500;
+    color: #fff;
+}
+
+.index-logo h1 {
+    width: 60px;
+    height: 65px;
+    font-size: 0;
+}
+
+.index-logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo.png) no-repeat left center;
+    background-size: 34px;
+}
+
+.index-login {
+    height: 65px;
+    line-height: 65px;
+}
+
+.index-login a {
+    display: inline-block;
+    width: 28px;
+    height: 65px;
+    font-size: 14px;
+}
+
+.index-login span {
+    margin: 0 25px;
+    font-size: 14px;
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    .index-nav {
+        display: none !important;
+    }
+}
+
+.index-nav {
+    flex: 1;
+    display: flex;
+    margin: 0 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-nav-item {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+}
+
+.index-header a:hover {
+    color: #ff6700;
+}
+
+/* 顶部模块 end */
+
+/* 内容部分 start */
+.poster {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.poster-item {
+    flex: 1;
+}
+
+.poster img {
+    width: 100%;
+}
+
+.poster-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.poster-contain {
+    display: flex;
+    width: 300%;
+    animation: move 10s infinite;
+}
+
+.poster-contain .poster {
+    flex: 1;
+}
+
+@keyframes move {
+    30% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-33.33%);
+    }
+
+    63% {
+        transform: translateX(-33.33%);
+    }
+
+    66% {
+        transform: translateX(-66.66%);
+    }
+
+    100% {
+        transform: translateX(-66.66%);
+    }
+}
+
+/* poster-box下方的长条 */
+.poster-box::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24%;
+    height: 3px;
+    background-color: #b0b0b0;
+}
+
+.poster-box::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8%;
+    height: 3px;
+    background-color: #ff6700;
+}
+
+/* 内容部分 end */
+
+/* <!-- 返回顶部模块 start --> */
+.index-tool-top {
+    position: sticky;
+    z-index: 2;
+    top: 888px;
+    left: 70%;
+    width: 42px;
+    height: 62px;
+}
+.index-tool-top a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/top-icon.png) no-repeat;
+    background-size: 42px;
+}
+/* <!-- 返回顶部模块 end --> */
+/* 长条 */
+.strip {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: rgba(0,0,0,.8);
+}
+.poster:first-child {
+    position: relative;
+    z-index: 2;
+}
